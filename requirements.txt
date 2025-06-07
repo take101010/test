@@ -1,0 +1,7 @@
+requests
+jsonlib
+pandas
+streamlit
+streamlit-calendar
+matplotlib
+seaborn
