@@ -1,12 +1,7 @@
-import requests
-import json
 import pandas as pd
 import streamlit as st
-from streamlit_calendar import calendar
 import matplotlib.pyplot as plt
 import seaborn as sns
-import datetime
-
 
 ### 🔵CSV読み込み
 kouza = pd.read_csv('kouza.csv')
