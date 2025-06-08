@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+import datetime
 
 ### 🔵CSV読み込み
 kouza = pd.read_csv('kouza.csv')
