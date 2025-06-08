@@ -24,7 +24,7 @@ sns.set(style='darkgrid', font=['Meiryo', 'Yu Gothic'])
 
 
 ### 🔴 CSV取込みテスト画面
-tab1, tab2, tab3 = st.tabs(['📑 CSV取込みテスト', '📥 API利用テスト(東証)', '🔍 データフィルタリングテスト'])
+tab1, tab2 = st.tabs(['📑 CSV取込みテスト', '🔍 データフィルタリングテスト'])
 with tab1:
     st.markdown("<h2 style='color: #E67E22;'>📑 CSV取込みテスト</h2>", unsafe_allow_html=True)
     col1, col2 = st.columns([1, 4])
@@ -88,13 +88,9 @@ with tab1:
         ax.set_ylabel("売買額")
         st.pyplot(fig) 
 
-### 🟢 API利用テスト(東証)画面
-with tab2:
-    st.markdown("<h2 style='color: #2ECC71;'>📥 API利用テスト(東証)</h2>", unsafe_allow_html=True)
-    
 
 ### 🟤 データフィルタリングテスト
-with tab3:
+with tab2:
     st.markdown("<h2 style='color: #0066ff;'>🔍 データフィルタリングテスト</h2>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns([1, 2, 1])
     
