@@ -50,18 +50,18 @@ with tab1:
         st.markdown('<p style="font-size:16px; color:gray; font-weight:bold;">口座数推移</p>', unsafe_allow_html=True)
         fig, ax = plt.subplots(figsize=(8, 5))
         fig.patch.set_facecolor('#FAFAD2')
-        ax.plot(filtered_data['date'], filtered_data['kouza'], label='実績')
-        ax.plot(filtered_data['date'], filtered_data['goal'], label='目標')
+        ax.plot(filtered_data['date'], filtered_data['kouza'], label='Ach')
+        ax.plot(filtered_data['date'], filtered_data['goal'], label='goal')
         ax.set_xticks(filtered_data['date'][::10])
-        ax.set_xlabel('日付')
-        ax.set_ylabel('口座数')
+        ax.set_xlabel('date')
+        ax.set_ylabel('kouza')
         ax.legend()
         st.pyplot(fig)
 
     col5, col6 = st.columns(2)
     # 年齢別残高割合円グラフ作成の前処理                       
     bins = [20, 30, 40, 50, 60, 70, 80, 90]
-    labels = ['20代', '30代', '40代', '50代', '60代', '70代', '80代']
+    labels = ['20s', '30s', '40s', '50s', '60s', '70s', '80s']
     cut = pd.cut(kokyaku['age'], bins=bins, labels=labels, right=False)
     value_counts = cut.value_counts(sort=False)
     light_colors = ['#FFC1CC', '#FFDDC1', '#D1FFC1', '#C1D9FF', '#E1C1FF', '#FFE1DD', '#FFFFC1']
@@ -86,7 +86,7 @@ with tab1:
             color=['#ADD8E6' if v > 0 else '#FFB6C1' for v in torihiki['total']]
         )
         ax.axhline(0, color="black", linewidth=1)
-        ax.set_ylabel("売買額")
+        ax.set_ylabel("txn")
         st.pyplot(fig) 
 
 
