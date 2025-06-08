@@ -5,10 +5,10 @@ import seaborn as sns
 import datetime
 
 ### 🔵CSV読み込み
-kouza = pd.read_csv('kouza.csv')
-kokyaku = pd.read_csv('kokyaku.csv')
-torihiki = pd.read_csv('torihiki.csv')
-torihiki_1 = pd.read_csv('torihiki_1.csv')
+kouza = pd.read_csv('kouza.csv', encoding="utf-8")
+kokyaku = pd.read_csv('kokyaku.csv', encoding="utf-8")
+torihiki = pd.read_csv('torihiki.csv', encoding="utf-8")
+torihiki_1 = pd.read_csv('torihiki_1.csv', encoding="utf-8")
 
 
 
