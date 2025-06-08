@@ -75,6 +75,10 @@ with tab1:
         st.pyplot(fig) 
 
     # 商品売買額の棒グラフ表示
+    torihiki['product'] = torihiki['product'].replace({
+    '投信': 'toushin',
+    '預金': 'yokin'
+    })
     torihiki.loc[torihiki['buysell'] == '売', 'total'] *= -1
     with col6:
         st.markdown('<p style="font-size:16px; color:gray; font-weight:bold;">商品別売買額</p>', unsafe_allow_html=True)
