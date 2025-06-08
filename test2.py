@@ -20,7 +20,8 @@ st.set_page_config(page_title='testapp', page_icon='💹', layout='wide')
 st.markdown('<style>.stApp {background-color: #FAFAD2;}</style>', unsafe_allow_html=True)
 
 # 日本語フォント設定
-sns.set(style='darkgrid', font=['Meiryo', 'Yu Gothic'])
+plt.rcParams['font.family'] = 'Noto Sans JP'
+sns.set(style='darkgrid', font_scale=1.2)
 
 
 ### 🔴 CSV取込みテスト画面
